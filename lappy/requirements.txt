@@ -1,0 +1,33 @@
+# ============================================================
+#   LAPPY — Python Requirements
+#   Run: pip install -r requirements.txt
+# ============================================================
+
+# Core AI
+groq>=0.9.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Speech Recognition (STT)
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.13
+
+# Text to Speech (TTS)
+pyttsx3>=2.90
+gTTS>=2.5.0          # Optional: better voice quality (needs internet)
+pygame>=2.5.0         # Required for gTTS audio playback
+
+# Computer Control
+pyautogui>=0.9.54
+pygetwindow>=0.0.9
+pyperclip>=1.8.2
+
+# System Info
+psutil>=5.9.0
+
+# Optional: Offline Whisper STT (better accuracy, bigger download)
+# faster-whisper>=1.0.0
+
+# Optional: Volume control on Windows
+# pycaw>=20230407
