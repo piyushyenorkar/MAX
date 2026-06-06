@@ -7,6 +7,11 @@ Use --gui for dashboard, --text for text mode.
 
 import sys
 import os
+import io
+
+# Fix for Windows terminal emoji printing errors
+if sys.stdout.encoding.lower() != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 

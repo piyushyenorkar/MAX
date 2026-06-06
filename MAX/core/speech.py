@@ -29,6 +29,11 @@ def _speak_pyttsx3(text):
     """Speak using pyttsx3. Fresh engine each call to avoid lock-up."""
     try:
         import pyttsx3
+        try:
+            import pythoncom
+            pythoncom.CoInitialize()
+        except Exception:
+            pass
         engine = pyttsx3.init()
         voices = engine.getProperty('voices')
         # Prefer Zira (female, clearer) then David
@@ -181,6 +186,7 @@ def listen_for_wake_word(wake_word: str, callback) -> bool:
             try:
                 audio = r.listen(source, timeout=3, phrase_time_limit=4)
                 text = r.recognize_google(audio).lower()
+                print(f"[WAKE DEBUG] Heard: '{text}'")
                 if wake_word.lower() in text:
                     callback()
                     return True

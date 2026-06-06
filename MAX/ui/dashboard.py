@@ -85,10 +85,10 @@ def launch_gui():
     clock_lbl.pack(side="right", padx=20)
 
     def update_clock():
-        while True:
-            clock_var.set(datetime.now().strftime("  %H:%M:%S  |  %a %d %b %Y  "))
-            time.sleep(1)
-    threading.Thread(target=update_clock, daemon=True).start()
+        clock_var.set(datetime.now().strftime("  %H:%M:%S  |  %a %d %b %Y  "))
+        root.after(1000, update_clock)
+    
+    update_clock()
 
     # ══════════════════════════════════════
     #  MAIN LAYOUT
@@ -250,10 +250,10 @@ def launch_gui():
     tk.Frame(stats_card, height=8, bg=CARD_BG).pack()
 
     def update_stats():
-        while True:
-            cmd_count_var.set(str(state.command_count))
-            time.sleep(1)
-    threading.Thread(target=update_stats, daemon=True).start()
+        cmd_count_var.set(str(state.command_count))
+        root.after(1000, update_stats)
+    
+    update_stats()
 
     # Quick commands card
     quick_card = tk.Frame(right, bg=CARD_BG)

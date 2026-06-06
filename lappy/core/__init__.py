@@ -1,1 +1,0 @@
-# Lappy Core Package

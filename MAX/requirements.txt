@@ -15,8 +15,8 @@ pyaudio>=0.2.13
 
 # Text to Speech (TTS)
 pyttsx3>=2.90
-gTTS>=2.5.0          # Optional: better voice quality (needs internet)
-pygame>=2.5.0         # Required for gTTS audio playback
+gTTS>=2.5.0
+pygame>=2.5.0
 
 # Computer Control
 pyautogui>=0.9.54
@@ -26,8 +26,7 @@ pyperclip>=1.8.2
 # System Info
 psutil>=5.9.0
 
-# Optional: Offline Whisper STT (better accuracy, bigger download)
-# faster-whisper>=1.0.0
+faster-whisper>=1.0.0
 
 # Optional: Volume control on Windows
 # pycaw>=20230407
