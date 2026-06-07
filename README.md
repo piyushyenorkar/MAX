@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="MAX.png" alt="MAX Logo" height="150"/>
+  <img src="MAX/MAX.png" alt="MAX Logo" height="150"/>
   
   <h1>⚡ MAX - AI Desktop Assistant</h1>
   
